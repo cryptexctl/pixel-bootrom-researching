@@ -984,3 +984,91 @@ trusty/vendor/lassen/dpu/tz/app/secure_fb/secure_dpu_drv.c
 com.android.trusty.secure_dpu
 arbung@MacBook-Air-romanticunchanging extracted % 
 ```
+
+## tzfw:
+```
+void UndefinedFunction_0005ffe2(undefined4 param_1,undefined4 param_2,int param_3)
+
+{
+  code *pcVar1;
+  byte bVar2;
+  undefined2 uVar3;
+  undefined *puVar4;
+  undefined4 uVar5;
+  int iVar6;
+  int iVar7;
+  int iVar8;
+  int unaff_r7;
+  undefined4 in_cr0;
+  undefined4 in_cr2;
+  undefined4 in_cr3;
+  undefined4 in_cr4;
+  undefined4 in_cr5;
+  undefined4 in_cr6;
+  undefined4 in_cr7;
+  undefined4 in_cr10;
+  undefined4 in_cr15;
+  undefined8 unaff_d10;
+  undefined8 unaff_d9;
+  undefined8 in_d7;
+  
+  *(int *)(*(int *)(unaff_r7 + 0x70) + 0x94) = unaff_r7 + -0x33;
+  uVar5 = ram0x0000001e;
+  bVar2 = *(byte *)(DAT_00060100 + -0x25);
+  iVar7 = DAT_00060168 + -0x3a;
+  *(uint *)(bVar2 + 0x20) = (uint)*DAT_00060160 + (param_3 + 0x16) * -0x1000000;
+  ram0x0000001e = uVar5;
+  puVar4 = SysTick;
+  uVar5 = ram0x0000001e;
+  iVar6 = (uint)bVar2 * 0x40;
+  coprocessor_moveto(3,5,1,iVar7,in_cr15,in_cr3);
+  VectorRoundShiftRight(in_d7,0x10);
+  cRamffffffd0 = (char)*(undefined4 *)(iVar6 + -0xd) + '\\';
+  uRamfffffffc = 0xffffffcc;
+  Reset = (undefined *)(iVar6 + -0x1f);
+  NMI = (undefined *)0x0;
+  DAT_000004cc = 0x480;
+  VectorRoundShiftRight(in_d7,0x10);
+  DAT_50000004 = 0;
+  DAT_000000fb = 0;
+  DAT_00000103 = 0x3b;
+  DAT_00000107 = 0;
+  DAT_0000010b = 0;
+  _MasterStackPointer = 0x160000;
+  DAT_4fffffbd = 0xbd;
+  VectorPairwiseAddLong(unaff_d10,1);
+  iVar6 = (int)((uint)(int)*(short *)(ram0x00000016 + 0x2b) >> 0x14) >> 8;
+  iVar7 = iVar6 + 0x16;
+  iVar8 = (int)SysTick * 0x1000000;
+  DAT_000000ff = (uint)CONCAT21((short)iVar7,0x16);
+  *(int *)(iVar6 + 0x86) = iVar8;
+  ram0x0000001e = uVar5;
+  uVar5 = ram0x0000001e;
+  *(undefined4 *)(puVar4 + 0x36) = 200;
+  ram0x0000001e = uVar5;
+  uVar5 = ram0x0000001e;
+  iRamfffffe50 = (int)(char)puVar4[iVar7 >> (iVar8 + 0x4cU & 0xff)];
+  iRamfffffd94 = iRamfffffe50 + -0x48;
+  coprocessor_function2(1,0xb,2,in_cr0,in_cr2,in_cr7);
+  UsageFault._0_2_ = (ushort)UsageFault._1_1_;
+  coprocessor_function2(7,2,4,in_cr6,in_cr10,in_cr15);
+  VectorRoundShiftRight(unaff_d9,0x10);
+  DAT_00000047 = (int)CONCAT21(Reserved2._0_2_,Reserved2._2_1_) >> 8;
+  coprocessor_function(0xe,6,0,in_cr4,in_cr5,in_cr15);
+                    /* WARNING: Does not return */
+  pcVar1 = (code *)software_udf(0x1b,0x5fece);
+  uVar3 = Reserved2._0_2_;
+  unique0x10000066 = uVar5;
+  uVar5 = unique0x10000066;
+  Reserved2._0_2_ = uVar3;
+  (*pcVar1)();
+  uVar3 = Reserved2._0_2_;
+  ram0x0000001e = ram0x0000001e;
+  Reserved2._0_2_ = uVar3;
+}
+
+```
+
+![[Снимок экрана 2025-01-26 в 17.07.43.png]]
+
+
